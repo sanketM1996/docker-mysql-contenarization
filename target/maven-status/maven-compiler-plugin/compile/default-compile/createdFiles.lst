@@ -1,6 +1,0 @@
-com\app\entity\User$UserBuilder.class
-com\app\service\UserService.class
-com\app\FullStackApplication.class
-com\app\entity\User.class
-com\app\repo\UserRepository.class
-com\app\controller\WebController.class
