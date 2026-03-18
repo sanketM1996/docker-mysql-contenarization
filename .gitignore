@@ -1,0 +1,57 @@
+# =========================
+# Java / Spring Boot
+# =========================
+target/
+*.log
+*.class
+
+# =========================
+# IDE Files
+# =========================
+.idea/
+*.iml
+.vscode/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+application.properties
+application.yml
+
+# (Optional if you want to keep config, then remove above line)
+
+# =========================
+# Maven Wrapper
+# =========================
+.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# Docker
+# =========================
+*.tar
+docker-compose.override.yml
+
+# =========================
+# Node (if React frontend)
+# =========================
+node_modules/
+dist/
+build/
+
+# =========================
+# Coverage / Reports
+# =========================
+coverage/
