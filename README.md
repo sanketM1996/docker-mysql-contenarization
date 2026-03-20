@@ -110,7 +110,18 @@ Open in project home directoy:
 ```
 docker-compose up --build -d
 ```
+---
+## 💣 to remove container 
 
+```
+docker-compose down
+```
+---
+## 💣If you want to remove everything (containers + volumes + networks):
+
+```
+docker system prune -a --volumes
+```
 ---
 ## 🔍 Access Application
 
