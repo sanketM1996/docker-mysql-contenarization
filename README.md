@@ -49,13 +49,7 @@ docker network create project
 ## 🗄️ Step 4: Run MySQL Container
 
 ```bash
-docker run -d \
---name mysql-container \
---network project \
--e MYSQL_ROOT_PASSWORD=root \
--e MYSQL_DATABASE=devops_db \
--p 3307:3306 \
-mysql:8
+docker run -d --name mysql-container --network project -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops_db -p 3307:3306 mysql:8
 ```
 
 ---
@@ -63,14 +57,7 @@ mysql:8
 ## 🚀 Step 5: Run Spring Boot Application
 
 ```bash
-docker run -d \
--p 8081:8080 \
---name springboot-app \
---network project \
--e SPRING_DATASOURCE_URL=jdbc:mysql://mysql-container:3306/devops_db \
--e SPRING_DATASOURCE_USERNAME=root \
--e SPRING_DATASOURCE_PASSWORD=root \
-full-stack-app
+docker run -d -p 8081:8080 --name springboot-app --network project -e SPRING_DATASOURCE_URL=jdbc:mysql://mysql-container:3306/devops_db -e SPRING_DATASOURCE_USERNAME=root -e SPRING_DATASOURCE_PASSWORD=root full-stack-app
 ```
 
 ---
