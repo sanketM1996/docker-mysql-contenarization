@@ -103,6 +103,24 @@ SELECT * FROM users;
 ```
 
 ---
+## 🔍 or run docker compose 
+
+Open in project home directoy:
+
+```
+docker-compose up --build -d
+```
+
+---
+## 🔍 Access Application
+
+Open in browser:
+
+```
+http://localhost:8081
+```
+
+---
 
 ## 🧠 Key Concept
 
