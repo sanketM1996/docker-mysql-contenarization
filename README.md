@@ -105,6 +105,7 @@ Check database:
 SHOW DATABASES;
 USE devops_db;
 SHOW TABLES;
+SELECT * FROM users;
 ```
 
 ---
