@@ -1,6 +1,6 @@
 🚀 Spring Boot + MySQL Dockerized Application
 
-This project demonstrates how to containerize a Spring Boot application and connect it with a MySQL database using Docker with persistent storage using Docker Volumes.
+This project demonstrates how to containerize a Spring Boot application and connect it with MySQL using Docker with persistent storage.
 
 🛠️ Tech Stack
 
@@ -26,9 +26,6 @@ docker build -t full-stack-app .
 docker network create project
 💾 Step 4: Create Docker Volume
 docker volume create mysql-data
-
-👉 Ensures data persistence
-
 🗄️ Step 5: Run MySQL Container
 docker run -d \
 --name mysql-container \
@@ -47,11 +44,9 @@ docker run -d \
 -e SPRING_DATASOURCE_USERNAME=root \
 -e SPRING_DATASOURCE_PASSWORD=root \
 full-stack-app
-🔍 Access Application
-
-👉 http://localhost:8081
-
-🧪 Verify Database
+🔍 Step 7: Access Application
+http://localhost:8081
+🧪 Step 8: Verify Database
 docker exec -it mysql-container mysql -u root -p
 
 Password:
@@ -61,45 +56,21 @@ SHOW DATABASES;
 USE devops_db;
 SHOW TABLES;
 SELECT * FROM users;
-🧪 Test Data Persistence
-1. Insert data
+🧪 Step 9: Test Data Persistence
+Insert data
 INSERT INTO users(name,email) VALUES('Sanket','test@gmail.com');
-2. Remove container
+Remove container
 docker rm -f mysql-container
-3. Run again (same command)
+Run again (same command)
 
 👉 ✅ Data will still exist
 
-🧠 Key Concept
-
-Containers in the same Docker network communicate using container names:
-
-mysql-container:3306
-💾 What is Docker Volume?
-
-A Docker volume stores data outside the container filesystem, ensuring data is not lost when containers are removed.
-
 ❗ Troubleshooting
-Port issue
-netstat -ano | findstr :8081
+Check running containers
+docker ps
 Check logs
 docker logs springboot-app
 docker logs mysql-container
-Remove containers
-docker rm -f mysql-container springboot-app
-Check volume
-docker volume ls
-docker inspect mysql-data
-📌 Notes
-
-Ensure Docker is running
-
-Ensure ports 8081 and 3307 are free
-
-Use correct database name (devops_db)
-
-Always use volume for production databases
-
 ⭐ Author
 
 Sanket Mahajan
