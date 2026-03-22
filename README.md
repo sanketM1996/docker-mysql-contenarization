@@ -13,7 +13,11 @@ This project demonstrates how to containerize a Spring Boot application and conn
 * Maven
 
 ---
+## 🛠️ If you want to run on AWS 
 
+[Follow This Link](AWS.md)
+
+---
 ## 📦 Step 1: Build the Application (Maven)
 
 First, build the JAR file using Maven:
